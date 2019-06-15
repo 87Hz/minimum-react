@@ -1,2 +1,3 @@
 # minimum-react
-Minimum boilerplate for react
+
+Minimum boilerplate for TypeScript React.
