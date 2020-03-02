@@ -1,7 +1,12 @@
-module.exports = function(api) {
+module.exports = (api) => {
   api.cache(true);
 
-  const presets = ['@babel/typescript', '@babel/react', '@babel/env'];
+  const presets = [
+    '@babel/typescript',
+    '@babel/react',
+    '@babel/env',
+    'linaria/babel',
+  ];
   const plugins = [];
 
   return {
