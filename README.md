@@ -8,3 +8,13 @@ Minimum boilerplate for TypeScript React.
 - webpack
 - linaria (zero runtime CSS-in-JS)
 - typescript
+
+## Usage
+
+```bash
+npm ci
+```
+and then
+```bash
+npm start
+```
