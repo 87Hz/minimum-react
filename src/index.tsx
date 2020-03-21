@@ -1,15 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import { Button } from './Button';
+import { App } from '~/App';
 
-const App = () => {
-  return (
-    <div>
-      <p>Hello</p>
-      <Button>Btn</Button>
-    </div>
-  );
-};
-
-render(<App />, document.getElementById('app'));
+render(<App/>, document.getElementById('app'));
