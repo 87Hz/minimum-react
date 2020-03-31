@@ -1,15 +1,9 @@
 {
-  "include": [
-    "src",
-    "./.webpack/webpack.config.ts"
-  ],
+  "include": ["src", "./.webpack"],
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
-    "lib": [
-      "dom",
-      "esnext"
-    ],
+    "lib": ["dom", "esnext"],
     "importHelpers": true,
     "declaration": true,
     "sourceMap": true,
@@ -28,12 +22,8 @@
     "moduleResolution": "node",
     "baseUrl": "./",
     "paths": {
-      "~/*": [
-        "src/*"
-      ],
-      "*": [
-        "node_modules/*"
-      ]
+      "~/*": ["src/*"],
+      "*": ["node_modules/*"]
     },
     "jsx": "react",
     "esModuleInterop": true
