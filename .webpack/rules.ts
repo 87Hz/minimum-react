@@ -14,7 +14,7 @@ export const tsRule: RuleCreator = (config) => {
 
   return ({
     exclude: /node_modules/,
-    test: /\.tsx$/,
+    test: /\.tsx?$/,
     use: [
       { loader: 'babel-loader' },
       {
