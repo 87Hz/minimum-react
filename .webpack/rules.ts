@@ -1,18 +1,18 @@
-import { concat, lensPath, over } from 'ramda';
-import { Configuration, RuleSetRule } from 'webpack';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import { concat, lensPath, over } from 'ramda'
+import { Configuration, RuleSetRule } from 'webpack'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 type RuleCreator = (config: Configuration) => RuleSetRule
 
 export const addRules = (ruleCreators: RuleCreator[]) => (config: Configuration): Configuration => {
-  const rules = ruleCreators.map(r => r(config));
-  return over(lensPath(['module', 'rules']), concat(rules), config);
-};
+  const rules = ruleCreators.map((r) => r(config))
+  return over(lensPath(['module', 'rules']), concat(rules), config)
+}
 
 export const tsRule: RuleCreator = (config) => {
-  const isNonProd = config.mode !== 'production';
+  const isNonProd = config.mode !== 'production'
 
-  return ({
+  return {
     exclude: /node_modules/,
     test: /\.tsx?$/,
     use: [
@@ -22,13 +22,13 @@ export const tsRule: RuleCreator = (config) => {
         options: { sourceMap: isNonProd },
       },
     ],
-  });
-};
+  }
+}
 
 export const cssRule: RuleCreator = (config) => {
-  const isNonProd = config.mode !== 'production';
+  const isNonProd = config.mode !== 'production'
 
-  return ({
+  return {
     test: /\.css$/,
     use: [
       {
@@ -40,5 +40,5 @@ export const cssRule: RuleCreator = (config) => {
         options: { sourceMap: isNonProd },
       },
     ],
-  });
-};
+  }
+}
