@@ -19,7 +19,8 @@ const basicConfig: Configuration = {
     compress: false,
     historyApiFallback: true,
     contentBase: resolve('./public'),
-    host: '0.0.0.0',
+    disableHostCheck: true,
+    host: '127.0.0.1',
   },
 
   resolve: {
