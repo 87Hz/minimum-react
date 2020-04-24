@@ -4,6 +4,7 @@ import { ThemeProvider } from '~/components/ThemeProvider'
 import { ThemeToggle } from '~/components/ThemeToggle'
 import { ThemeReader } from '~/components/ThemeReader'
 import { RestyledButton } from '~/components/RestyledButton'
+import { DynamicButtonDemo } from "~/components/DynamicButtonDemo";
 
 export const App = () => {
   return (
@@ -13,6 +14,8 @@ export const App = () => {
       <RestyledButton>RestyledBtn</RestyledButton>
       <ThemeToggle />
       <ThemeReader />
+      <br />
+      <DynamicButtonDemo />
     </ThemeProvider>
   )
 }
