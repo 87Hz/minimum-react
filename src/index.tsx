@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
 
-import { App } from '~/App'
+import { AppWithReduxStore } from '~/AppWithReduxStore'
 
-render(<App />, document.getElementById('app'))
+render(<AppWithReduxStore />, document.getElementById('app'))
