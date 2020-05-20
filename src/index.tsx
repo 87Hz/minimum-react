@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
 
-import { App } from '~/App'
+import { AppWithOvermind } from '~/AppWithOvermind'
 
-render(<App />, document.getElementById('app'))
+render(<AppWithOvermind />, document.getElementById('app'))
